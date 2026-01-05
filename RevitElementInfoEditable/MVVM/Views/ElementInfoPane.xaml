@@ -1,0 +1,41 @@
+﻿<Page x:Class="RevitElementInfoEditable.MVVM.Views.ElementInfoPane"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      Title="Element Info">
+
+    <Grid Margin="8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+            <Button Content="Save XML" Command="{Binding SaveXmlCommand}" Margin="0,0,8,0"/>
+            <Button Content="Load XML" Command="{Binding LoadXmlCommand}" Margin="0,0,8,0"/>
+            <Button Content="Apply Changes to Revit" Command="{Binding ApplyChangesCommand}" />
+        </StackPanel>
+
+        <DataGrid Grid.Row="1"
+                  ItemsSource="{Binding Rows}"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  IsReadOnly="False"
+                  HeadersVisibility="All" SelectionChanged="DataGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ElementId" Binding="{Binding ElementId}" IsReadOnly="True" Width="90"/>
+                <DataGridTextColumn Header="ElementName" Binding="{Binding ElementName}" IsReadOnly="True" Width="160"/>
+                <DataGridTextColumn Header="Parameter" Binding="{Binding ParameterName}" IsReadOnly="True" Width="220"/>
+                <DataGridTextColumn Header="StorageType" Binding="{Binding StorageType}" IsReadOnly="True" Width="110"/>
+                <DataGridTextColumn Header="Value" Binding="{Binding Value}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <TextBlock Grid.Row="2" Foreground="Gray" Margin="0,8,0,0"
+                   Text="Edit 'Value' cells, then click 'Apply Changes to Revit'. Doubles use Revit unit formatting."/>
+    </Grid>
+</Page>

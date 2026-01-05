@@ -1,0 +1,42 @@
+﻿<!-- defines the UI layout for a WPF Window-->
+    <Window x:Class="RevitWPFParameterInfo4.MVVM.Views.ParameterInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Parameter Information"
+        Height="520" Width="860"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="CanResizeWithGrip"
+        MinHeight="400" MinWidth="600"
+        >
+    <DockPanel>
+        <!-- Header -->
+        <Border DockPanel.Dock="Top" Padding="10" Background="#F4F6F8">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Element: " FontWeight="Bold" Margin="0,0,6,0"/>
+                <TextBlock Text="{Binding ElementName}" />
+            </StackPanel>
+        </Border>
+
+        <!-- Grid -->
+        <DataGrid ItemsSource="{Binding Parameters}"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  IsReadOnly="True"
+                  Margin="10"
+                  EnableRowVirtualization="True"
+                  EnableColumnVirtualization="True"
+                  >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Parameter Name" Binding="{Binding Name}" Width="*" />
+                <DataGridTextColumn Header="Value" Binding="{Binding Value}" Width="2*" />
+                <DataGridTextColumn Header="Storage Type" Binding="{Binding StorageType}" Width="*" />
+                <DataGridCheckBoxColumn Header="Read-only" Binding="{Binding IsReadOnly}" Width="100" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Footer -->
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+            <Button Content="Close" Width="100" Height="32" IsDefault="True" Click="Close_Click"/>
+        </StackPanel>
+    </DockPanel>
+</Window>

@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <!-- Target Windows specifically -->
+	  <TargetFramework>net8.0-windows</TargetFramework>
+	  <!-- Enable WPF -->
+	  <UseWPF>true</UseWPF>
+	  
+   <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  
+  </PropertyGroup>
+
+
+  <!-- Add WPF framework reference -->
+  <ItemGroup>
+	  <FrameworkReference Include="Microsoft.WindowsDesktop.App.WPF" />
+
+ <Reference Include="RevitAPI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2025\RevitAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2025\RevitAPIUI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
+
+

@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<!-- For Revit 2025 and earlier classic add-ins, net48 is safe -->
+		<TargetFramework>net48</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<PlatformTarget>x64</PlatformTarget>
+		<!-- Optional: deterministic builds, nullable, etc. -->
+		<Nullable>disable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- WPF assemblies -->
+		<Reference Include="PresentationCore" />
+		<Reference Include="PresentationFramework" />
+		<Reference Include="WindowsBase" />
+		<Reference Include="System.Xaml" />
+
+		<!-- Revit API assemblies - update <YEAR> to your installed version -->
+		<Reference Include="Autodesk.RevitAPI">
+			<HintPath>C:\Program Files\Autodesk\Revit 2025\RevitAPI.dll</HintPath>
+			<Private>false</Private>
+			<!-- Copy Local = False -->
+		</Reference>
+
+		<Reference Include="Autodesk.RevitAPIUI">
+			<HintPath>C:\Program Files\Autodesk\Revit 2025\RevitAPIUI.dll</HintPath>
+			<Private>false</Private>
+			<!-- Copy Local = False -->
+		</Reference>
+	</ItemGroup>
+</Project>

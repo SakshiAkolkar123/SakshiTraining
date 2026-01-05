@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36717.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RevitWPFParameterInfo4", "RevitWPFParameterInfo4.csproj", "{50F8D896-38A8-4697-A95C-B9339346F3BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50F8D896-38A8-4697-A95C-B9339346F3BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50F8D896-38A8-4697-A95C-B9339346F3BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50F8D896-38A8-4697-A95C-B9339346F3BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50F8D896-38A8-4697-A95C-B9339346F3BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B38A7ECF-53FE-4841-AE8D-3474C628FE43}
+	EndGlobalSection
+EndGlobal

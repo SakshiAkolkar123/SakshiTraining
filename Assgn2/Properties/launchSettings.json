@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Assgn2": {
+      "commandName": "Project"
+    },
+    "Assignment2WithRevit": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\Autodesk\\Revit 2025\\Revit.exe"
+    }
+  }
+}
