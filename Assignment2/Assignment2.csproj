@@ -1,29 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-	  <!-- Target Windows specifically -->
-	  <TargetFramework>net8.0-windows</TargetFramework>
-	  <!-- Enable WPF -->
-	  <UseWPF>true</UseWPF>
-	  
-   <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-	  
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
 
-
-  <!-- Add WPF framework reference -->
-  <ItemGroup>
-	  <FrameworkReference Include="Microsoft.WindowsDesktop.App.WPF" />
-
- <Reference Include="RevitAPI">
-      <HintPath>C:\Program Files\Autodesk\Revit 2025\RevitAPI.dll</HintPath>
-    </Reference>
-    <Reference Include="RevitAPIUI">
-      <HintPath>C:\Program Files\Autodesk\Revit 2025\RevitAPIUI.dll</HintPath>
-    </Reference>
-  </ItemGroup>
+	<ItemGroup>
+		<Reference Include="PresentationCore">
+			<HintPath>C:\Windows\Microsoft.NET\Framework\v4.0.30319\WPF\PresentationCore.dll</HintPath>
+		</Reference>
+		<Reference Include="PresentationFramework">
+			<HintPath>C:\Windows\Microsoft.NET\Framework\v4.0.30319\WPF\PresentationFramework.dll</HintPath>
+		</Reference>
+		<Reference Include="RevitAPI">
+			<HintPath>C:\Program Files\Autodesk\Revit 2025\RevitAPI.dll</HintPath>
+		</Reference>
+		<Reference Include="RevitAPIUI">
+			<HintPath>C:\Program Files\Autodesk\Revit 2025\RevitAPIUI.dll</HintPath>
+		</Reference>
+		<Reference Include="System.Windows.Forms">
+			<HintPath>C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Windows.Forms.dll</HintPath>
+		</Reference>
+	</ItemGroup>
 
 </Project>
-
-
